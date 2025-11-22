@@ -1,0 +1,29 @@
+{
+  "name": "w-stack-template",
+  "version": "1.0.0",
+  "private": true,
+  "description": "W-Stack template: React + TypeScript + Azure",
+  "scripts": {
+    "dev": "concurrently \"pnpm:dev:*\"",
+    "dev:frontend": "cd frontend && pnpm dev",
+    "dev:backend": "cd backend && pnpm dev",
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "test:e2e": "playwright test",
+    "lint": "pnpm -r lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
+    "type-check": "pnpm -r type-check",
+    "clean": "pnpm -r clean && rm -rf node_modules",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "concurrently": "^8.2.2",
+    "prettier": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}
