@@ -1,13 +1,13 @@
-# 🚀 Welcome to Your W-Stack Template!
+# 🚀 Welcome to Your No-Bikeshed Template!
 
 This template gives you a production-ready foundation for building enterprise web applications with AI assistance.
 
 ## 🤖 AI-Guided Setup (Recommended)
 
-**Copy this prompt into Claude (or your AI assistant):**
+**Copy this prompt into your AI assistant:**
 
 ```
-I just cloned the w-stack-template repository. Guide me through complete setup:
+I just cloned this repository. Guide me through complete setup:
 
 1. Check if I have all prerequisites installed
 2. Help me create required accounts (Azure, SendGrid, Sentry, Stripe)
@@ -88,7 +88,7 @@ pnpm dev
 
 **Monorepo Structure:**
 ```
-w-stack-template/
+/
 ├── frontend/          # React app
 ├── backend/           # Fastify API
 ├── shared/            # Shared types/schemas (Zod)
