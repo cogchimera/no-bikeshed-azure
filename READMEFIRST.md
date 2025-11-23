@@ -1,37 +1,87 @@
-# 🚀 Welcome to Your W-Stack Template!
+# 🚀 Welcome to No-Bikeshed Azure!
 
-This template gives you a production-ready foundation for building enterprise web applications with AI assistance.
+**Decisions made. Start building.**
 
-## 🤖 AI-Guided Setup (Recommended)
+This template eliminates tech stack decisions so you can focus on building your app.
 
-**Copy this prompt into Claude (or your AI assistant):**
+---
+
+## 🤖 AI Assistant Setup (5 minutes)
+
+**Use Cline + Claude 3.5 Sonnet.** This combination generates the highest-quality TypeScript/React code.
+
+### Setup Steps:
+
+**1. Install Cline Extension**
+```bash
+# Open VS Code
+# Go to Extensions (Cmd/Ctrl + Shift + X)
+# Search: "Cline"
+# Click Install
+```
+
+**2. Get Claude API Key**
+- Go to: https://console.anthropic.com
+- Sign up / Log in
+- Click "Get API Keys"
+- Create new key
+- Copy the key
+- Add $20 credit to your account
+
+**3. Configure Cline**
+- Click Cline icon in VS Code sidebar
+- Click settings gear icon
+- Select provider: "Anthropic"
+- Paste your API key
+- Select model: "Claude 3.5 Sonnet"
+- Enable auto-approve:
+  - ✅ Read files
+  - ✅ Safe commands
+  - ❌ Edit files (keep manual for now)
+
+**4. Open This Project**
+```bash
+code .
+```
+
+**5. Start AI-Guided Setup**
+
+Click Cline icon in sidebar and paste this prompt:
 
 ```
-I just cloned the w-stack-template repository. Guide me through complete setup:
+I just cloned the no-bikeshed-azure template.
+Guide me through complete setup:
 
-1. Check if I have all prerequisites installed
-2. Help me create required accounts (Azure, SendGrid, Sentry, Stripe)
-3. Configure local development environment with Docker
-4. Set up environment variables
+1. Check if prerequisites are installed
+2. Help configure accounts (Azure, SendGrid, Sentry, Stripe)
+3. Set up local development environment with Docker
+4. Configure environment variables
 5. Run the application locally
-6. Understand the project structure
-7. Create my first feature using AI
+6. Create my first feature
 
-Ask me questions ONE AT A TIME and wait for my answers before proceeding.
+Stack: React + TypeScript + Fastify + Azure + PostgreSQL
+
+Ask ONE question at a time. Wait for my answer before proceeding.
 Start by checking my prerequisites.
 ```
 
+**Cost: ~$20-30/month** (typical usage, pay-as-you-go)
+
+---
+
 ## 📋 Prerequisites
 
-Before starting, you need:
-- [ ] Node.js 20+ (use nvm: `nvm install 20 && nvm use 20`)
-- [ ] pnpm installed (`npm install -g pnpm`)
-- [ ] Docker Desktop installed and running
-- [ ] Git installed
-- [ ] Code editor (VS Code recommended)
+You need:
+- [ ] Node.js 20+ (`nvm install 20 && nvm use 20`)
+- [ ] pnpm (`npm install -g pnpm`)
+- [ ] Docker Desktop (running)
+- [ ] Git
+- [ ] VS Code
 - [ ] Azure account (credit card required, free tier available)
 
-## 🏃 Quick Start (DIY)
+---
+
+## 🏃 Quick Start (If Skipping AI Setup)
 
 ```bash
 # 1. Install dependencies
@@ -56,103 +106,168 @@ pnpm dev
 # PostgreSQL: localhost:5432
 ```
 
+---
+
 ## 📚 What's Included
 
 **Frontend:**
-- ✅ React 18 + TypeScript + Vite
-- ✅ Tailwind CSS + shadcn/ui components
-- ✅ React Router + React Query
-- ✅ React Hook Form + Zod validation
+- React 18 + TypeScript + Vite
+- Tailwind CSS + shadcn/ui
+- React Router + React Query
+- React Hook Form + Zod
 
 **Backend:**
-- ✅ Node.js + TypeScript + Fastify
-- ✅ PostgreSQL (Azure Database)
-- ✅ Azure SignalR (realtime)
-- ✅ OpenAPI/Swagger docs
+- Node.js + TypeScript + Fastify
+- PostgreSQL (Azure Database)
+- OpenAPI/Swagger docs
+- Azure SignalR (realtime)
 
 **Infrastructure:**
-- ✅ Feature flags system (database-based)
-- ✅ Analytics event logging
-- ✅ User feedback system
-- ✅ Email templates (React Email)
-- ✅ Multi-tenancy ready (dormant)
+- Feature flags (database)
+- Analytics events
+- User feedback system
+- Email templates (React Email)
+- Multi-tenancy ready (dormant)
 
 **Development:**
-- ✅ Testing (Vitest + Playwright)
-- ✅ CI/CD (GitHub Actions)
-- ✅ Error tracking (Sentry)
-- ✅ Synthetic monitoring
-- ✅ Docker Compose for local dev
+- Testing (Vitest + Playwright)
+- CI/CD (GitHub Actions)
+- Error tracking (Sentry)
+- Synthetic monitoring
+- Docker Compose (local dev)
 
-## 🎯 Key Concepts
+---
 
-**Monorepo Structure:**
+## 🎯 Project Structure
+
 ```
-w-stack-template/
-├── frontend/          # React app
-├── backend/           # Fastify API
-├── shared/            # Shared types/schemas (Zod)
-├── emails/            # Email templates (React Email)
-└── tests/             # E2E and synthetic tests
+no-bikeshed-azure/
+├── READMEFIRST.md         # You are here
+├── frontend/              # React app
+├── backend/               # Fastify API
+├── shared/                # Shared types/schemas (Zod)
+├── emails/                # Email templates (React Email)
+├── tests/                 # E2E and synthetic tests
+├── docker-compose.yml     # Local development
+└── docs/                  # Documentation
+    ├── backlog.md         # Your feature backlog
+    ├── guides/            # Setup, prompts, deployment
+    └── checklists/        # Code review, pre-deploy
 ```
 
-**AI-Assisted Workflow:**
-1. Add idea to `docs/backlog.md`
-2. Use AI to generate feature spec
-3. AI generates code + tests
-4. Human reviews and iterates
-5. Deploy to staging → test → promote to production
-
-## 📖 Documentation
-
-- **AI Prompts:** `docs/guides/ai-prompts.md`
-- **Setup Guide:** `docs/guides/setup-local-dev.md`
-- **Deployment:** `docs/guides/deployment.md`
-- **Troubleshooting:** `docs/guides/troubleshooting.md`
-- **Runbooks:** `docs/runbooks/`
+---
 
 ## 🔑 Required Accounts
 
-**Azure (Primary):**
-- Azure Database for PostgreSQL
-- Azure Static Web Apps (frontend)
-- Azure Container Apps (backend)
-- Azure SignalR Service (realtime)
-- Azure Key Vault (secrets)
-- Azure Application Insights (monitoring)
+**Azure Services:**
+- Azure Database for PostgreSQL (free tier: $0-5/month)
+- Azure Static Web Apps (free tier: unlimited)
+- Azure Container Apps (free tier: limited)
+- Azure SignalR Service (free tier: 20 connections)
+- Azure Key Vault (free tier: $0-1/month)
+- Azure AD B2C (free tier: 50K MAU)
 
-**Supporting:**
-- GitHub (CI/CD)
-- Sentry (error tracking - free tier)
-- SendGrid (email - 100/day free)
-- Stripe (payments - test mode free)
+**Supporting Services:**
+- **GitHub** - Version control + CI/CD (free)
+- **Sentry** - Error tracking (free: 5K errors/month)
+- **Resend** - Email service (free: 3K emails/month)
+- **Stripe** - Payments (test mode free)
 
-## 💰 Cost Expectations
+---
 
-**MVP:** ~$20-50/month
-**Production:** ~$150-350/month
+## 💰 Monthly Costs
 
-## 🎓 Next Steps
+**MVP (Minimal Use):**
+- Azure: $20-50/month (depending on usage)
+- Resend: $0 (free tier)
+- Sentry: $0 (free tier)
+- Claude API: $20-30
+- **Total: $40-80/month**
 
-1. ✅ Complete setup (use AI prompt above)
-2. 📖 Read `docs/guides/ai-prompts.md`
-3. 👀 Review example feature
-4. 🚀 Build your first feature with AI
-5. 📦 Deploy to staging
+**Growth (Production Scale):**
+- Azure: $100-300/month
+- Resend: $20/month (if exceed free tier)
+- Sentry: $26/month
+- Claude API: $30-50/month
+- **Total: $175-400/month**
+
+---
+
+## 🎓 AI-Assisted Workflow
+
+1. Add feature idea to `docs/backlog.md`
+2. Ask AI to generate feature spec
+3. Review spec, iterate with AI
+4. AI generates code + tests
+5. Review code using `docs/checklists/code-review.md`
+6. Deploy to staging → test → promote to production
+
+**See `docs/guides/ai-prompts.md` for prompt templates.**
+
+---
+
+## 📖 Key Documentation
+
+- **AI Prompts:** `docs/guides/ai-prompts.md` - Prompt templates for common tasks
+- **Setup Guide:** `docs/guides/setup-local-dev.md` - Detailed local setup
+- **Stack Decisions:** `docs/STACK.md` - Why we chose each technology
+- **Deployment:** `docs/guides/deployment.md` - How to deploy to Azure
+- **Code Review:** `docs/checklists/code-review.md` - Review checklist
+- **Troubleshooting:** `docs/guides/troubleshooting.md` - Common issues
+
+---
 
 ## 🆘 Troubleshooting
 
 **Docker won't start?**
 - Check Docker Desktop is running
 - Check ports 3001, 5432 aren't in use
-- Try `docker-compose down && docker-compose up -d`
+- Try: `docker-compose down && docker-compose up -d`
 
 **Migrations fail?**
-- Check PostgreSQL container: `docker ps`
+- Check PostgreSQL container is running: `docker ps`
 - Test connection: `psql postgresql://postgres:postgres@localhost:5432/wstack`
+
+**pnpm install fails?**
+- Verify Node 20+: `node --version`
+- Try: `pnpm install --force`
+
+**Cline not working?**
+- Check Claude API key is valid
+- Check you have credit on Anthropic account
+- Restart VS Code
 
 **More help:** See `docs/guides/troubleshooting.md`
 
 ---
 
-**Ready to build?** Start with the AI prompt above! 🚀
+## 🎯 Next Steps
+
+1. ✅ Complete AI-guided setup (use prompt above)
+2. 📖 Read `docs/guides/ai-prompts.md`
+3. 🎨 Customize branding (colors in `frontend/tailwind.config.js`)
+4. 🚀 Build your first feature with AI
+5. 📦 Deploy to staging
+6. 🎉 Ship to production
+
+---
+
+## 🤝 Contributing
+
+Want to improve this template?
+
+Read `CONTRIBUTING.md` first. This template is **intentionally opinionated** - we don't add choices, we eliminate them.
+
+---
+
+## 📞 Support
+
+- 📚 Documentation: `docs/`
+- 🐛 Issues: GitHub Issues
+- 💬 Discussions: GitHub Discussions
+
+---
+
+**Ready to build?** Start with the AI setup prompt above! 🚀
+
+**No bikeshedding. Just shipping.** ⚡
